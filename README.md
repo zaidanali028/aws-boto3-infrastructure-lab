@@ -8,23 +8,22 @@
 This repository demonstrates how to provision robust AWS infrastructure using **Boto3** (AWS SDK for Python) and **Python**. The infrastructure includes:
 
 ## Project Structure
-
-This structure helps organize the project files and ensures a clear separation of concerns, making the codebase more maintainable and easier to navigate.
-├── LICENSE                       # License file for the project, defines terms and conditions for using, modifying, and distributing the code.
-├── README.md                     # Documentation file providing an overview of the project, setup instructions, and deployment steps.
-├── architecture-diagram.png      # Visual representation of the AWS infrastructure including VPC, subnets, EC2 instances, etc.
-├── config                        # Directory for configuration-related files.
-│   └── constants.py              # Shared constants like AWS region, SSH key name, and IP address for dynamic configuration across the project.
-├── main.py                       # Main entry point for provisioning AWS resources, orchestrating EC2, S3, VPC creation, and displaying outputs.
-├── requirements.txt              # List of dependencies required to run the project, typically including Boto3 and other libraries.
-├── services                      # Directory containing service modules for handling specific AWS resource management tasks.
-│   ├── ec2_service.py           # EC2 service module for creating security groups, provisioning EC2 instances, and associating Elastic IPs (EIPs).
-│   ├── s3_service.py            # S3 service module for creating and managing S3 buckets with versioning and cleanup policies.
-│   └── vpc_service.py           # VPC service module for creating a VPC, subnets, and configuring the network infrastructure.
-└── utils                         # Directory for utility scripts.
-    └── output.py                # Utility script for printing the outputs of the created resources like instance IDs and S3 bucket names.
-
-
+```
+.
+├── LICENSE                       # Legal terms for code usage and distribution
+├── README.md                     # Project documentation and overview
+├── architecture-diagram.png      # Visual representation of AWS infrastructure
+├── config                        # Configuration management
+│   └── constants.py              # Centralized configuration constants
+├── main.py                       # Primary script for resource provisioning
+├── requirements.txt              # Project dependency specifications
+├── services                      # AWS resource management modules
+│   ├── ec2_service.py            # EC2 instance and network configuration
+│   ├── s3_service.py             # S3 bucket management and policies
+│   └── vpc_service.py            # Network infrastructure setup
+└── utils                         # Utility scripts
+└── output.py                 # Resource creation result reporting
+```
 ## Features
 
 - 📦 **Infrastructure as Code (IaC)** using Boto3  
